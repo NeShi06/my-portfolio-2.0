@@ -1,0 +1,78 @@
+---
+import Navbar from '@/components/Navbar.astro'
+import Footer from '@/components/Footer.astro'
+import ToTopBtn from '@/components/ToTopBtn.astro'
+
+import { getI18N } from '@/i18n'
+
+interface Props {
+  title: string
+  description: string
+}
+
+const { currentLocale } = Astro
+const { title, description } = Astro.props
+const i18n = getI18N({ currentLocale })
+const {
+  seo,
+  pages: { globals }
+} = i18n
+---
+
+<!doctype html>
+<html lang={currentLocale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <!--OPEN GRAPH-->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/banner.jpg" />
+
+    <link
+      rel="alternate"
+      href="https://frankcff.netlify.app/en"
+      hreflang="en-US"
+    />
+    <link rel="canonical" href="https://frankcff.netlify.app/" />
+    <link
+      rel="preload"
+      href="/fonts/RobotoMono-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-secondary">
+    <Navbar />
+    <main class="flex flex-col gap-12 bg-primary md:gap-16">
+      <slot />
+    </main>
+    <ToTopBtn langText={globals.accessibility.ToTop} />
+    <Footer langText={globals.footer} />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --page-background-title-color: #1c1d1e;
+    --page-background-content-color: #161719;
+    --content-text-color: rgb(255, 255, 255);
+  }
+  @font-face {
+    font-family: 'Roboto-Mono';
+    src: url('/fonts/RobotoMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Roboto-Mono';
+    src: url('/fonts/RobotoMono-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>

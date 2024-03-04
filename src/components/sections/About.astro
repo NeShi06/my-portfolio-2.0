@@ -1,0 +1,41 @@
+---
+import Card from '@/components/Card.astro'
+
+interface Props {
+  langText: {
+    content: string
+    card: {
+      title: string
+      body: string
+      footer: string
+    }
+  }
+}
+
+const { langText } = Astro.props
+---
+
+<article class="grid items-center gap-6 lg:grid-cols-2">
+  <article>
+    <h3 class="mb-6 mt-4 font-roboto text-2xl font-bold tracking-wider text-white">
+      Frank Contreras
+    </h3>
+
+    <p
+      class="text-pretty font-roboto text-base text-gray-400 lg:max-w-[50ch]"
+      set:html={langText.content}
+    />
+  </article>
+
+  <div class="mt-12 lg:mt-0">
+    <Card title={langText.card.title} className="p-6">
+      <p class="my-4 font-roboto text-xs leading-5 text-gray-400">
+        {langText.card.body}
+      </p>
+
+      <p class="font-roboto text-xs font-bold tracking-wide text-gray-400">
+        {langText.card.footer}
+      </p>
+    </Card>
+  </div>
+</article>

@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string
+  centered?: boolean
+  className?: string
+}
+
+const { title, centered, className } = Astro.props
+---
+
+<article
+  class:list={[
+    `bg-secondary w-full rounded-xl border border-gray-500`,
+    className,
+    { 'flex flex-col items-center justify-center': centered }
+  ]}
+>
+  <slot name="before-title" />
+
+  <h2 class="text-pretty font-roboto text-xs font-bold text-white sm:text-lg">
+    {title}
+  </h2>
+
+  <slot />
+</article>

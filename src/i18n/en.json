@@ -1,0 +1,88 @@
+{
+  "seo": {
+    "index": {
+      "TITLE": "Frank Contreras | Portfolio",
+      "DESCRIPTION": "Frank Contreras' portfolio, Front-End Developer"
+    }
+  },
+  "pages": {
+    "globals": {
+      "footer": "Developed by Frank Contreras",
+      "accessibility": {
+        "ToTop": "Back to top of the page."
+      }
+    },
+    "index": {
+      "navbarLinks": [
+        {
+          "title": "Experience",
+          "label": "experience",
+          "url": "/en/#experience"
+        },
+        {
+          "title": "Projects",
+          "label": "projects",
+          "url": "/en/#projects"
+        },
+        {
+          "title": "About me",
+          "label": "about-me",
+          "url": "/en/#about-me"
+        },
+        {
+          "title": "Skills",
+          "label": "skills",
+          "url": "/en/#skills"
+        },
+        {
+          "title": "Contact",
+          "label": "contact",
+          "url": "mailto:fr.acf2709@gmail.com"
+        }
+      ],
+      "content": {
+        "profile": {
+          "download": "Download C.V."
+        },
+        "projects": "My featured projects",
+        "experience": [
+          {
+            "time": "August 2022 - August 2023.",
+            "title": "Junior Programmer Analyst",
+            "body": "Carrying out maintenance of the institution's internal applications, technical support, and creation of a provisional website, which was operational until July 2023."
+          }
+        ],
+        "myprojects": [
+          {
+            "title": "Pokedex Pokemon - Find your favorite Pokemons!",
+            "body": "Website which you can find Pokemons, making use of the API called PokeAPI. Built from scratch with Next.js and React.",
+            "alt": "Image of the website"
+          },
+          {
+            "title": "Tic Tac Toe",
+            "body": "Website which you can play the classic Tic Tac Toe. Built from scratch with React.",
+            "alt": "Image of the website"
+          },
+          {
+            "title": "I.M.C.P. Website",
+            "body": "Provisional Website carried out during my staying at the I.M.C.P; Built from scratch with React.",
+            "alt": "Image of the website"
+          }
+        ],
+        "about": {
+          "content": "Web developer specialized in Front-End web applications with React, Vue.js and Astro. <br /> <br/> I have the title of Computing University Technical College from the Instituto Universitario de Mercadotecnia, and since august 2023, I have been studying English at Oxford Venezuela institute. <br /> <br /> I am currently 20 years old and I live in Caracas, Venezuela.",
+          "card": {
+            "title": "Computing University Technical College",
+            "body": "Title of Computing University Technical College at Instituto Universitario de Mercadotecnia (I.S.U.M.).",
+            "footer": "- Graduated on July 2023."
+          }
+        }
+      },
+      "accessibility": {
+
+      }
+    }
+  }
+
+
+}

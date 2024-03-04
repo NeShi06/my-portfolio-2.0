@@ -1,0 +1,55 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import IndexSection from '@/layouts/IndexSection.astro'
+
+import Profile from '@/components/sections/Profile.astro'
+import Experience from '@/components/sections/Experience.astro'
+import About from '@/components/sections/About.astro'
+import Skills from '@/components/sections/Skills.astro'
+import Projects from '@/components/sections/Projects.astro'
+
+import { getI18N } from '@/i18n'
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+const {
+  seo,
+  pages: { index }
+} = i18n
+---
+
+<Layout title={seo.index.TITLE} description={seo.index.DESCRIPTION}>
+  <Profile altText={index.content.profile.download} />
+
+  <IndexSection
+    iconName="brackets-angle-off"
+    id={index.navbarLinks[0].label}
+    title={index.navbarLinks[0].title}
+  >
+    <Experience experiences={index.content.experience} />
+  </IndexSection>
+
+  <IndexSection
+    iconName="brackets-angle-off"
+    id={index.navbarLinks[1].label}
+    title={index.navbarLinks[1].title}
+  >
+    <Projects />
+  </IndexSection>
+
+  <IndexSection
+    iconName="user-circle"
+    id={index.navbarLinks[2].label}
+    title={index.navbarLinks[2].title}
+  >
+    <About langText={index.content.about} />
+  </IndexSection>
+
+  <IndexSection
+    iconName="tool"
+    id={index.navbarLinks[3].label}
+    title={index.navbarLinks[3].title}
+  >
+    <Skills />
+  </IndexSection>
+</Layout>

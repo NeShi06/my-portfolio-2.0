@@ -1,0 +1,30 @@
+---
+import { Icon } from 'astro-icon/components'
+
+interface Props {
+  id: string
+  iconName?: string
+  title: string
+}
+
+const { id, title, iconName } = Astro.props
+---
+
+<section
+  id={id}
+  class="mx-auto w-full max-w-5xl scroll-mt-20 px-4 sm:px-12 md:px-16 xl:px-0"
+>
+  <header class="flex items-center gap-5">
+    { iconName && <Icon name={iconName} size={28} class="text-white" /> }
+
+    <h3
+      class="bg-gradient-to-r from-emerald-600 from-30% to-green-500 bg-clip-text font-roboto text-xl font-bold text-transparent"
+    >
+      {title}
+    </h3>
+  </header>
+
+  <slot />
+
+  <hr class="mt-12 rounded-lg border border-dotted border-gray-700 md:mt-16" />
+</section>

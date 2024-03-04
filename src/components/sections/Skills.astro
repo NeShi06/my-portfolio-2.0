@@ -1,0 +1,19 @@
+---
+import { Icon } from 'astro-icon/components'
+import { knowledgeData } from '@/data/knowledge.data'
+import Card from '@/components/Card.astro'
+---
+
+<ul
+  class="mt-8 grid grid-cols-[repeat(auto-fit,_minmax(min(100%,100px),_1fr))] md:grid-cols-[repeat(auto-fit,_minmax(min(100%,160px),_1fr))] place-items-center gap-8 md:gap-10 lg:mt-10"
+>
+  {
+    Object.entries(knowledgeData).map(([key, { title, color }]) => (
+      <li class="w-full grid place-items-center">
+        <Card title={title} className="p-4 text-xs sm:text-base md:text-lg" centered>
+          <Icon name={key} size={36} class={`${color} mb-2`} slot="before-title" />
+        </Card>
+      </li>
+    ))
+  }
+</ul>

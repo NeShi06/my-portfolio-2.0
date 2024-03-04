@@ -1,0 +1,86 @@
+{
+  "seo": {
+    "index": {
+      "TITLE": "Frank Contreras | Portfolio",
+      "DESCRIPTION": "Portfolio web de Frank Contreras, Desarrollador Web Front-End"
+    }
+  },
+  "pages": {
+    "globals": {
+      "footer": "Desarrollador por Frank Contreras",
+      "accessibility": {
+        "ToTop": "Ir al inicio de la página."
+      }
+    },
+    "index": {
+      "navbarLinks": [
+        {
+          "title": "Experiencia",
+          "label": "experiencia",
+          "url": "/#experiencia"
+        },
+        {
+          "title": "Proyectos",
+          "label": "proyectos",
+          "url": "/#proyectos"
+        },
+        {
+          "title": "Sobre mí",
+          "label": "sobre-mi",
+          "url": "/#sobre-mi"
+        },
+        {
+          "title": "Habilidades",
+          "label": "habilidades",
+          "url": "/#habilidades"
+        },
+        {
+          "title": "Contacto",
+          "label": "contacto",
+          "url": "mailto:fr.acf2709@gmail.com"
+        }
+      ],
+      "content": {
+        "profile": {
+          "download": "Descargar C.V."
+        },
+        "projects": "Mis proyectos destacados",
+        "experience": [
+          {
+            "time": "Agosto de 2022 - Agosto de 2023.",
+            "title": "Analista Programador Junior",
+            "body": "Realización de mantenimiento de aplicativos internos de la institución, soporte técnico, y creación de página web provisional, la cual estuvo operativa hasta julio de 2023."
+          }
+        ],
+        "myprojects": [
+          {
+            "title": "Pokédex Pokémon - ¡Busca a tus Pokemons favoritos!",
+            "body": "Página con la que puede buscar Pokemons, haciendo uso de la API llamada PokeAPI. Creado desde cero con Next.js y React.",
+            "alt": "Imágen de la página web"
+          },
+          {
+            "title": "Tres en raya",
+            "body": "Página web en la cual se puede jugar el clásico Tres en raya. Creado desde cero con React.",
+            "alt": "Imágen de la página web"
+          },
+          {
+            "title": "Página del I.M.C.P.",
+            "body": "Página provisional realizada durante mi estancia en el I.M.C.P; Creado desde cero React.",
+            "alt": "Imágen de la página web"
+          }
+        ],
+        "about": {
+          "content": "Desarrollador web especializado en aplicaciones web Front-End con React, Vue.js y Astro. <br /> <br/> Cuento con el título de Técnico Superior Universitario de el Instituto Universitario de Mercadotecnia, y desde agosto de 2023 estudio Inglés en el Instituto Oxford Venezuela. <br /> <br /> Actualmente tengo 20 años y resido en Caracas, Venezuela.",
+          "card": {
+            "title": "Técnico Superior Universitario en Informática",
+            "body": "Título de Técnico Superior Universitario en Informática de el Instituto Universitario de Mercadotecnia (I.S.U.M.).",
+            "footer": "- Graduado en junio de 2023."
+          }
+        }
+      },
+      "accessibility": {
+
+      }
+    }
+  }
+}

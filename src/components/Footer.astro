@@ -1,0 +1,39 @@
+---
+import { Icon } from 'astro-icon/components'
+
+import { socialData } from '@/data/social.data'
+
+interface Props {
+  langText: string
+}
+
+const { langText } = Astro.props
+---
+
+<footer class="w-full bg-[#161719] py-12">
+  <div
+    class="mx-auto flex max-w-3xl flex-col items-center justify-center gap-6 px-4 sm:flex-row sm:justify-between sm:gap-0 sm:px-12 md:px-16 lg:px-0"
+  >
+    <p
+      class="text-center font-roboto text-xl font-bold tracking-wider text-white sm:text-start"
+    >
+      {langText}
+    </p>
+
+    <ul class="flex flex-row-reverse gap-6">
+      {
+        Object.entries(socialData).map(([key, { link, title }]) => (
+          <li>
+            <a href={link} target="_blank" rel="noreferrer" aria-label={title}>
+              <Icon
+                name={key}
+                size={32}
+                class="text-gray-400 transition-colors hover:text-emerald-600"
+              />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</footer>

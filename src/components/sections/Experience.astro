@@ -1,0 +1,13 @@
+---
+import ExperienceItem from '@/components/ExperienceItem.astro'
+
+const { experiences } = Astro.props
+---
+
+<ol class="mt-6 ms-4 relative border-s border-gray-700 space-y-10">
+  {
+    experiences.map(experience => (
+      <ExperienceItem item={experience} />
+    ))
+  }
+</ol>

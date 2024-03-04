@@ -1,0 +1,48 @@
+---
+import { Icon } from 'astro-icon/components'
+
+interface Props {
+  langText: string
+}
+
+const { langText } = Astro.props
+---
+
+<button
+  id="Totop"
+  class="group pointer-events-none fixed bottom-[5%] right-[3.5%] z-50 grid h-[40px] w-[40px] cursor-pointer place-items-center rounded-md bg-emerald-600 text-white opacity-0 transition-[background-color,_opacity] hover:bg-emerald-700"
+  aria-label={langText}
+>
+  <Icon
+    name="chevron-up"
+    size={28}
+    class="group-hover:animate-bounce group-hover:motion-safe:animate-bounce"
+  />
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const totop = document.getElementById('Totop') as HTMLElement
+    const breakpoint = 250
+
+    totop.addEventListener(
+      'click',
+      () => (document.documentElement.scrollTop = 0)
+    )
+
+    const callback = () => {
+      if (window.scrollY >= breakpoint) {
+        if (!totop.classList.contains('pointer-events-auto')) {
+          totop.classList.replace('opacity-0', 'opacity-100')
+          totop.classList.replace('pointer-events-none', 'pointer-events-auto')
+        }
+      } else {
+        totop.classList.replace('opacity-100', 'opacity-0')
+        totop.classList.replace('pointer-events-auto', 'pointer-events-none')
+      }
+    }
+  
+    callback()
+    window.addEventListener('scroll', callback)
+  })
+</script>
