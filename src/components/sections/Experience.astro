@@ -1,6 +1,14 @@
 ---
 import ExperienceItem from '@/components/ExperienceItem.astro'
 
+interface Props {
+  experiences: {
+    time: string
+    title: string,
+    body: string
+  }[]
+}
+
 const { experiences } = Astro.props
 ---
 
