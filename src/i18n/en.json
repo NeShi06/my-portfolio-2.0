@@ -17,22 +17,22 @@
         {
           "title": "Experience",
           "label": "experience",
-          "url": "/en/#experience"
+          "url": "#experience"
         },
         {
           "title": "Projects",
           "label": "projects",
-          "url": "/en/#projects"
+          "url": "#projects"
         },
         {
           "title": "About me",
           "label": "about-me",
-          "url": "/en/#about-me"
+          "url": "#about-me"
         },
         {
           "title": "Skills",
           "label": "skills",
-          "url": "/en/#skills"
+          "url": "#skills"
         },
         {
           "title": "Contact",
@@ -42,7 +42,10 @@
       ],
       "content": {
         "profile": {
-          "download": "Download C.V."
+          "download": {
+            "title": "Download C.V.",
+            "link": "https://drive.google.com/file/d/1zdrvicmd434eRNJ4RfIHNVYXUiW_zUzT/view?usp=sharing"
+          }
         },
         "projects": "My featured projects",
         "experience": [

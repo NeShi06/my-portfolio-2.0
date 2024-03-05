@@ -1,7 +1,8 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n'
 
-import LangSelector from '@/components/LangSelector.astro'
+import NavbarLinksMobile from '@/components/NavbarLinksMobile.astro'
+import NavbarLinks from '@/components/NavbarLinks.astro'
 
 import { getI18N } from '@/i18n'
 
@@ -14,7 +15,7 @@ const {
 
 <header
   id="navbar"
-  class="sticky top-0 z-50 min-h-[57px] w-full pb-2 pt-3 backdrop-blur-md sm:px-12 md:px-16 xl:px-0"
+  class="sticky top-0 z-50 min-h-[57px] px-4 pb-2 pt-3 backdrop-blur-md sm:px-12 md:px-16 xl:px-0"
 >
   <div class="mx-auto flex max-w-5xl items-center justify-between">
     <a
@@ -37,24 +38,8 @@ const {
     </a>
 
     <nav>
-      <ul class="flex items-center gap-4">
-        {
-          index.navbarLinks.map(({ title, url, label }) => (
-            <li class="text-emerald-500">
-              <a
-                href={url}
-                class="relative font-roboto text-sm tracking-wide transition-colors after:absolute after:-bottom-[6px] after:left-1/2 after:h-[1.25px] after:w-3/4 after:-translate-x-1/2 after:scale-x-0 after:rounded-full after:bg-emerald-300 after:transition-transform after:duration-300 hover:text-emerald-300 hover:after:scale-x-100"
-                aria-label={label}
-              >
-                {title}
-              </a>
-            </li>
-          ))
-        }
-        <li>
-          <LangSelector />
-        </li>
-      </ul>
+      <NavbarLinksMobile links={index.navbarLinks} />
+      <NavbarLinks links={index.navbarLinks} />
     </nav>
   </div>
 </header>

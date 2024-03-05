@@ -5,24 +5,29 @@ import { knowledgeData } from '@/data/knowledge.data'
 import { socialData } from '@/data/social.data'
 
 interface Props {
-  altText: string
+  langText: {
+    download: {
+      title: string
+      link: string
+    }
+  }
 }
 
-const { altText } = Astro.props
+const { langText } = Astro.props
 ---
 
 <section
   class="bg-secondary relative flex min-h-[550px] w-full flex-col items-center justify-center gap-12 px-4 md:px-0 lg:gap-0"
 >
   <a
-    href="/"
+    href={langText.download.link}
     class="bg-primary relative flex items-center justify-center gap-1 rounded-lg border-[.5px] border-gray-500 p-2 font-roboto text-base tracking-tight text-white transition-all hover:scale-105 hover:bg-white/10 lg:absolute lg:top-10"
     target="_blank"
     rel="noreferrer"
   >
     <Icon name="file-download" size={18} class="text-white" />
 
-    {altText}
+    {langText.download.title}
   </a>
 
   <article class="flex flex-col items-center gap-4">

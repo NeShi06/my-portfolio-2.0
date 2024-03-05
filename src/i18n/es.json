@@ -42,7 +42,10 @@
       ],
       "content": {
         "profile": {
-          "download": "Descargar C.V."
+          "download": {
+            "title": "Descargar C.V.",
+            "link": "https://drive.google.com/file/d/1zdrvicmd434eRNJ4RfIHNVYXUiW_zUzT/view?usp=sharing"
+          }
         },
         "projects": "Mis proyectos destacados",
         "experience": [
